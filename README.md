@@ -1,7 +1,16 @@
 # shortener
 短链服务。工程训练项目；Clean Architecture 极简版。
 
+Day1: 项目骨架 + 架构图 ✅
 # 架构图
+```mermaid
+graph TD;
+    A[Client] -->|HTTP Request| B[FastAPI];
+    B -->|Call Service| C[Shortener Service];
+    C -->|Use Repository| D[SQLite Database];
+```
+
+# 项目骨架
 shortener/
 ├── api/
 │   └── routes.py        # 路由层（只放 HTTP 逻辑）
@@ -20,4 +29,4 @@ shortener/
 ├── README.md            # 用 Markdown 画一张架构图
 └── requirements.txt     
 
-Day1: 项目骨架 + 架构图 ✅
+
